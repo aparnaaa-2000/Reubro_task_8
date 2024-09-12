@@ -1,0 +1,33 @@
+const initialState = {
+    length: '',
+    width: '',
+    waterPerSqm: '',
+    radius: '',
+    depth: '',
+    height: '',
+    angle: '',
+    flowRate: '',
+  };
+   export const calculationsReducer = (state = initialState, action) => {
+    switch (action.type) {
+      case 'SET_LENGTH':
+        return { ...state, length: action.payload };
+      case 'SET_WIDTH':
+        return { ...state, width: action.payload };
+      case 'SET_WATER_PER_SQM':
+        return { ...state, waterPerSqm: action.payload };
+      case 'SET_RADIUS':
+        return { ...state, radius: action.payload };
+      case 'SET_DEPTH':
+        return { ...state, depth: action.payload };
+      case 'SET_HEIGHT':
+        return { ...state, height: action.payload };
+      case 'SET_ANGLE':
+        return { ...state, angle: action.payload };
+      case 'SET_FLOW_RATE':
+        return { ...state, flowRate: action.payload };
+      default:
+        return state;
+    }
+  };
+ 
